@@ -1,0 +1,19 @@
+<h1>admin recette</h1>
+<ul>
+    <li>
+        <%= @recette.user.nom%>
+        <%= @recette.user.prenom%>
+    </li>
+    <li>
+        <%= @recette.titre%>
+    </li>
+    <li>
+        <%= @recette.etapes%>
+        
+    </li>
+    <li>
+            
+        nombre ingredient: <%= @recette.ingredients.count%>
+    
+    </li>
+</ul>

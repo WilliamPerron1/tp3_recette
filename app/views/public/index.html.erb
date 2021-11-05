@@ -1,0 +1,19 @@
+<ul>
+    <li>
+        <h1>
+            <%= @recette.titre%>
+        </h1
+    </li>
+    <li>
+        <%= @recette.etapes%>
+    </li>
+    <%for ingredients in @recette.ingredients%>
+    <li>
+        
+        <%= ingredients.nom%>
+        <%= @recette.ingredients.count%>
+        <%= ingredients.unite_defaut%>
+    </li>
+    <% end %>
+    
+</ul>

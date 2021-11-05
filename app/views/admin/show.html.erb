@@ -1,0 +1,20 @@
+<h1>admin recette</h1>
+<%for user in @users do %>
+    <%if user.recettes != [] %>
+    <ul>
+        <li>
+            <%=user.id%>
+            <%=user.nom%>
+            <%=user.prenom%>
+            <ol>
+                <%for recette in user.recettes do %>
+                    <li>
+                    <a href="recettes/<%=recette.id%>"><%=recette.titre%></a>   
+                    </li>
+                <%end%>
+            </ol>
+        </li>
+    </ul>
+    <%end%>
+<%end%>
+

@@ -1,0 +1,11 @@
+<h1>Recette public</h1>
+<%for recette in @recettes do %>
+    <ul>
+        <li>
+        <a href="/recettes/<%=recette.id%>"><%=recette.titre%></a>
+        
+
+        </li>
+    </ul>
+<%end%>
+ 
