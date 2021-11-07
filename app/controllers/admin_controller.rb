@@ -1,7 +1,11 @@
 class AdminController < ApplicationController
+    layout "application"
+    before_action :authenticate_user!
+    before_action :is_admin?
+
     def show
         
-        @users = User.where.not(recettes: nil)
+        @users = User.all
     end
 
     def recetteAdmin
@@ -9,6 +13,15 @@ class AdminController < ApplicationController
     end
 
     def accueil
+    end
+
+
+
+    def is_admin?
+        unless current_user.is_admin == true
+            flash[:notice] = "Only administrator have access here, redirecting to home page"
+            redirect_to '/'
+        end
         
     end
 end
