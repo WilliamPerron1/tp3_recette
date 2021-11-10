@@ -1,4 +1,4 @@
-class AdminController < SecretController
+class AdminController < Admin::SecretController
     layout "application"
     
 
