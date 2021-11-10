@@ -7,7 +7,8 @@ class PublicController < ApplicationController
     end
 
     def mesrecettesDetail
-        @recette = Recette.find(params[:id])
+        
+        @recette= Recette.find(params[:id])
         @ingredients = @recette.ingredients
         @ingredient = Array.new
         for ingredient in @ingredients
