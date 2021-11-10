@@ -1,7 +1,6 @@
-class AdminController < ApplicationController
+class AdminController < SecretController
     layout "application"
-    before_action :authenticate_user!
-    before_action :is_admin?
+    
 
     def show
         
@@ -17,11 +16,5 @@ class AdminController < ApplicationController
 
 
 
-    def is_admin?
-        unless current_user.is_admin == true
-            flash[:notice] = "Only administrator have access here, redirecting to home page"
-            redirect_to '/'
-        end
-        
-    end
+    
 end
