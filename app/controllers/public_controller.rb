@@ -9,6 +9,9 @@ class PublicController < ApplicationController
     def mesrecettesDetail
         
         @recette= Recette.find(params[:id])
+        if current_user != @recette.user
+            redirect_to '/mesrecettes' 
+        else
         @ingredients = @recette.ingredients
         @ingredient = Array.new
         for ingredient in @ingredients
@@ -20,6 +23,7 @@ class PublicController < ApplicationController
             format.xml  { render xml: @ingredient}
             format.json { render json: @ingredient}
         end
+    end
     end
 
     
