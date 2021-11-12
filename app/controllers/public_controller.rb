@@ -1,3 +1,4 @@
+#william perron 12 novembre
 class PublicController < ApplicationController
 
     before_action :authenticate_user!

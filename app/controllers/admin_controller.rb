@@ -1,3 +1,4 @@
+#william perron 12 novembre
 class AdminController < Admin::SecretController
     layout "application"
     
