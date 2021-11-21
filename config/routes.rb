@@ -10,10 +10,9 @@ Rails.application.routes.draw do
   
   get '/recettes/:id', to:'public#index'
 
-  get '/admin', to:'admin#accueil'
-
-  get '/admin/recettes', to:'admin#show'
-
-  get '/admin/recettes/:id', to:'admin#recetteAdmin'
-
+  namespace :admin do
+  get '', to:'secret#accueil'
+  get 'recettes', to:'secret#show'
+  get 'recettes/:id', to:'secret#recetteAdmin'
+  end
 end

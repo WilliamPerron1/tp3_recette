@@ -1,21 +1,16 @@
 #william perron 12 novembre
-class AdminController < Admin::SecretController
-    layout "application"
+class AdminController < ApplicationController
     
 
-    def show
+    before_action :authenticate_user!
+    before_action :is_admin?
+    
+
+    def is_admin?
+        unless current_user.is_admin == true
+            flash[:notice] = "Only administrator have access here, redirecting to home page"
+            redirect_to '/'
+        end
         
-        @users = User.all
-    end
-
-    def recetteAdmin
-        @recette = Recette.find(params[:id])
-    end
-
-    def accueil
-    end
-
-
-
-    
+    end 
 end
