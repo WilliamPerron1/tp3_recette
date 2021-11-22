@@ -1,7 +1,8 @@
 #william perron 12 novembre
 class Admin::SecretController < AdminController
     
-    layout "application"
+    
+    layout "admin"
     
     def show
         

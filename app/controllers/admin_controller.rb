@@ -1,7 +1,7 @@
 #william perron 12 novembre
 class AdminController < ApplicationController
     
-
+    
     before_action :authenticate_user!
     before_action :is_admin?
     
