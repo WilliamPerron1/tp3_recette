@@ -1,7 +1,9 @@
 #william perron 12 novembre
 class PublicController < ApplicationController
 
-    before_action :authenticate_user!
+    before_action :authenticate_user!, except: [:show]
+
+    layout "w3school"
 
     def mesrecettes
         @recettes = current_user.recettes
