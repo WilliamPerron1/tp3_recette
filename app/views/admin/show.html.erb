@@ -19,3 +19,16 @@
     <%end%>
 <%end%>
 
+<h2>toute les recette</h2>
+<%for recette in @recettes do %>
+    <ul>
+        <li>
+        <a href="recettes/<%=recette.id%>"><%=recette.titre%></a> <a href="recettes/editRecette/<%=recette.id%>">Edit recette</a>
+        
+
+        </li>
+    </ul>
+<%end%>
+<a href="recettes/ajoutRecette">Ajout recette</a>
+
+

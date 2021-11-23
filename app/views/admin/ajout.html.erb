@@ -1,0 +1,15 @@
+
+<h1>Ajout recette</h1>
+<%= form_with(url: "/admin/recettesadd", method: "post", local: true) do %>
+
+    <%= label_tag(:titre, "recette nom:") %> <br/>
+
+    <%= text_field_tag(:titre) %><br/>
+
+    <%= label_tag(:etapes, "recette etapes:") %><br/>
+
+    <%= text_area_tag(:etapes, "", size: "50x20") %><br/>
+
+    <%= submit_tag("Ajouter") %>
+
+<%end%>
