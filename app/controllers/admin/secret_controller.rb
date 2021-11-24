@@ -1,7 +1,7 @@
 #william perron 12 novembre
 class Admin::SecretController < AdminController
     
-    skip_before_action :verify_authenticity_token
+    #skip_before_action :verify_authenticity_token
     layout "admin"
 
     def ajout
